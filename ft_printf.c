@@ -6,11 +6,12 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 21:23:43 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/03 23:33:01 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/11/04 15:11:53 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "ft_printf.h"
+
 
 int data_type(va_list args,char *s)
 {
@@ -23,13 +24,13 @@ int data_type(va_list args,char *s)
     else if(*s == 's')
         count += ft_putstr(va_arg(args,char *));
     else if(*s == 'p')
-        count += ft_putadr(va_arg(args,void *));
+        count += ft_putptr(va_arg(args,void *));
     else if(*s == 'd' || *s == 'i')
         count += ft_putnbr(va_arg(args,int));
     else if(*s == 'u')
         count += ft_putnbr_uns(va_arg(args,unsigned int));
     else if(*s == 'x' || *s == 'X')
-        count += ft_putnbr_hex(va_arg(args,unsigned int));
+        count += ft_putnbr_hex(va_arg(args,unsigned int),*s);
     else if (*s == '%')
         count += ft_putchar('%'); 
     else
