@@ -12,28 +12,25 @@
 
 #include "ft_printf.h"
 
-int ft_putnbr_uns(unsigned int nb)
+int	ft_putnbr_uns(unsigned int nb)
 {
-    int count;
+	int	count;
 
-    count = 0;
-
-    if(nb < 10)
-    {
-        count += ft_putchar(nb + '0');
-    }
-     else
-    {
-       count += ft_putnbr_uns(nb / 10);
-       count += ft_putnbr_uns(nb % 10);  
-    }
-   return (count);
-         
+	count = 0;
+	if (nb < 10)
+	{
+		count += ft_putchar(nb + '0');
+	}
+	else
+	{
+		count += ft_putnbr_uns(nb / 10);
+		count += ft_putnbr_uns(nb % 10);
+	}
+	return (count);
 }
 /*
-int main()
+int	main(void)
 {
 ft_putnbr_uns(-12345);
-    
 }
 */

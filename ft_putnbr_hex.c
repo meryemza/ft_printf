@@ -12,34 +12,30 @@
 
 #include "ft_printf.h"
 
-int ft_putnbr_hex(unsigned long int nb,char form)
+int	ft_putnbr_hex(unsigned long int nb, char form)
 {
-    char *base;
-    int count;
+	char	*base;
+	int		count;
 
-
-    count = 0;    
-    if(form == 'x')
-        base = "0123456789abcdef";
-  
-    else if (form == 'X')
-        base = "0123456789ABCDEF";
-
-    if(nb < 16)
-    {
-        count += ft_putchar(base[nb]);
-    }
-    else
-    {
-    count += ft_putnbr_hex(nb / 16,form);
-    count += ft_putnbr_hex(nb % 16,form);
-    }
-    return (count);
-    
+	count = 0;
+	if (form == 'x')
+		base = "0123456789abcdef";
+	else if (form == 'X')
+		base = "0123456789ABCDEF";
+	if (nb < 16)
+	{
+		count += ft_putchar(base[nb]);
+	}
+	else
+	{
+		count += ft_putnbr_hex(nb / 16, form);
+		count += ft_putnbr_hex(nb % 16, form);
+	}
+	return (count);
 }
 /*
-int main()
+int	main(void)
 {
-     ft_putnbr_hex(13,'X');
+		ft_putnbr_hex(13,'X');
 }
 */

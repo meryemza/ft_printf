@@ -12,20 +12,18 @@
 
 #include "ft_printf.h"
 
-
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    int count;
+	int	count;
 
-    count = 0;
-    count += write(1,&c,1);
-    
-    return (count);  
+	count = 0;
+	count += write(1, &c, 1);
+	return (count);
 }
 /*
-int main()
+int	main(void)
 {
-printf ("%d\n",ft_putchar('m'));  
- printf ("%d\n",ft_putchar('a'));  
+printf ("%d\n",ft_putchar('m'));
+ printf ("%d\n",ft_putchar('a'));
 }
  */

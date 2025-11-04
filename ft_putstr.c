@@ -12,28 +12,26 @@
 
 #include "ft_printf.h"
 
-int ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
-    int count;
-    int i;
+	int	count;
+	int	i;
 
-    i = 0;
-    count = 0;
-      if(!str)
-        str = "(null)";
-        
-    while(str[i] != '\0')
-    {
-        count += write(1,&str[i],1);
-        i++;
-    }
-    return (count);
+	i = 0;
+	count = 0;
+	if (!str)
+		str = "(null)";
+	while (str[i] != '\0')
+	{
+		count += write(1, &str[i], 1);
+		i++;
+	}
+	return (count);
 }
 /*
-int main()
+int	main(void)
 {
-    printf("%d\n",ft_putstr("meryem"));
-     printf("%d\n",ft_putstr(NULL));
+	printf("%d\n",ft_putstr("meryem"));
+		printf("%d\n",ft_putstr(NULL));
 }
 */
-
