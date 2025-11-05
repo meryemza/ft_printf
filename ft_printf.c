@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 21:23:43 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/04 22:15:12 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/11/05 16:30:58 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_printf(const char *txt, ...)
 	va_start(args, txt);
 	i = 0;
 	count = 0;
-	while (txt)
+	while (txt[i])
 	{
 		if (txt[i] == '%')
 		{

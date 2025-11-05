@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:43:00 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/04 11:19:04 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/11/05 11:46:04 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putstr(char *str)
 		str = "(null)";
 	while (str[i] != '\0')
 	{
-		count += write(1, &str[i], 1);
+		count += ft_putchar(str[i]);
 		i++;
 	}
 	return (count);
