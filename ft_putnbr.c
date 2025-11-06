@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:43:56 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/05 11:45:02 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/11/06 10:50:27 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_putnbr(int nbr)
 /*
 int	main(void)
 {
-	ft_putnbr(-235);
+	// ft_putnbr(235);
+	// ft_putnbr(-21474836);
 }
 */
